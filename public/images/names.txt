@@ -1,0 +1,22 @@
+banner1: 爱乐之城
+banner2: 速度与激情8
+banner3: 加勒比海盗5：死无对证
+banner4: 摔跤吧！爸爸
+banner5: 喜欢你
+banner6: 哆啦A梦：大雄的南极冰冰凉大冒险
+
+movie1: 神奇女侠
+movie2: 加勒比海盗5：死无对证
+movie3: 摔跤吧！爸爸
+movie4: 哆啦A梦：大雄的南极冰冰凉大冒险
+movie5: 29+1
+movie6: 迷失Z城
+movie7: 美好的意外
+movie8: 荡寇风云
+movie9: 李雷和韩梅梅
+movie10: 吃吃的爱
+movie11: 异星觉醒
+movie12: 速度与激情8
+movie13: 春娇救志明
+movie14: 记忆大师
+movie15: 蓝精灵：寻找神秘村
