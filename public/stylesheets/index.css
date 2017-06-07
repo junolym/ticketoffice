@@ -134,7 +134,6 @@ max-width: none;
 position: absolute;
 top:58%;
 right:15%;
-
 }
 .button a{
 	text-decoration: none;
@@ -261,8 +260,8 @@ i.icon3{
 	/*padding:2em;*/
 }
 
-/*previous*/
-.movieprevious {
+/*display*/
+.moviedisplay {
   width: 980px;
   margin:20px auto;
   overflow: hidden;
@@ -298,6 +297,8 @@ i.icon3{
   float: left;
 	width:152px;
   margin-right: 11px;
+  padding-right: 8px;
+  padding-bottom: 5px;
 }
 
 .movie-image {
@@ -318,33 +319,37 @@ i.icon3{
 	position: relative;
 	z-index: 2;
 }
-.rating {
-	float:left;
-	width:152px;
-	padding-top:8px;
-}
-.rating p {
-	float:left;
-	font-size:10px;
-	color:#fff;
-	font-weight:bold;
-}
 
-.rating .stars {
-	float:left;
-	width:60px;
-	height:11px;
-	background:url('stars.gif') no-repeat 0 0;
-	margin-left:5px;
+.movie_name {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+  color:#fff;
 }
-.rating .stars-in {
-	width:48px;
-	display:inline;
-	background:url('stars.gif') no-repeat 0 bottom;
-	position:absolute; height:11px;
-	font-size: 0;
-	line-height: 0;
-	text-indent: -4000px;
+.price {
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.buybutton {
+  text-align: center;
+}
+.buybutton a{
+  text-decoration: none;
+	color: #fff;
+	background: #d8232a;
+	padding: 5px 25px;
+  margin-top: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 15px;
 }
 .comments {
 	background:url('comments.gif') no-repeat 0 center;
