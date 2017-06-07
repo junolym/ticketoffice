@@ -231,6 +231,8 @@ ul.list_1 li{
 span.m_1{
 	font-size:14px;
 	color:#cb242a;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 span.m_1 img{
 	vertical-align: text-bottom;
