@@ -42,11 +42,11 @@
   				<div class="movie-date-selection">
   					<ul>
   						<li class="location">
-  							<a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>{{cinema_loaction}}</a>
+  							<a href="javascript:void(0)"><i class="fa fa-map-marker"></i>{{cinema_loaction}}</a>
   						</li>
               {{#each time}}
   						<li class="time">
-  							<a href="/payment">{{cinema_time}}</a>
+  							<a href="/payment/{{../../movie_id}}/{{../cinema_loaction}}/{{this}}">{{this}}</a>
   						</li>
               {{/each}}
   					</ul>
