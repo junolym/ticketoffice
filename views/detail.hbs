@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+
+    <title>{{title}}</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="/stylesheets/detail.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+  <div class="container">
+  	<div class="main-content">
+  		<div class="now-showing-list">
+  			<div class="col-md-4 movies-by-category movie-booking">
+  				<div class="movie-ticket-book">
+              <div class="header_top">
+                <h3 class="moviename">{{movie_name}}</h3>
+              </div>
+  						<img src="{{movie_img}}" alt="" />
+  						<div class="bahubali-details">
+  							<h4>上映时间:</h4>
+  							<p>{{movie_publish}}</p>
+  							<h4>时长:</h4>
+  							<p>{{movie_time}}</p>
+  							<h4>导演:</h4>
+  							<p>{{movie_director}}</p>
+  							<h4>语言:</h4>
+  							<p>{{movie_language}}</p>
+  							<h4>类型:</h4>
+  							<p>{{movie_type}}</p>
+  							<h4>简介:</h4>
+  							<p>{{movie_description}}</p>
+  						</div>
+  					</div>
+  				</div>
+  			<div class="col-md-8 movies-dates">
+          {{#each cinema}}
+  				<div class="movie-date-selection">
+  					<ul>
+  						<li class="location">
+  							<a href="pic-a-movie.html"><i class="fa fa-map-marker"></i>{{cinema_loaction}}</a>
+  						</li>
+              {{#each time}}
+  						<li class="time">
+  							<a href="/payment">{{cinema_time}}</a>
+  						</li>
+              {{/each}}
+  					</ul>
+  				</div>
+          {{/each}}
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</body>

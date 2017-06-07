@@ -10,4 +10,8 @@ router.get('/detail', function(req, res, next) {
   res.render('detail', { title: 'Detail' });
 });
 
+router.get('/payment', function(req,res,next) {
+  res.render('payment', {{title:'Payment'}});
+});
+
 module.exports = router;

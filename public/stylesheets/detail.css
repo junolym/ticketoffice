@@ -1,0 +1,243 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12px;
+  line-height: 1.3;
+  background: url('bg.gif');
+}
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	font-family: 'Open Sans', sans-serif;
+}
+body a:hover {
+	  color: #007DD3;
+}
+p{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+
+h5.pre i.fa.fa-heart {
+	  color: #007DD3;
+  margin-right: 6px;
+}
+h5.pre{
+	font-size: 1em;
+	font-weight: 300;
+	margin-top: 2em;
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(102, 102, 102, 0.4);
+}
+
+.moviename {
+  text-align: center;
+  font-size: 2.0em;
+  font-weight: bolder;
+}
+
+.ticket-note h3{
+	font-size: 1.5em;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+.payment-right h6 {
+	      margin: 0.8em 0;
+    font-weight: 600;
+    font-size: 1em;
+    color: #003B64;
+}
+.payment-right h4 {
+	  margin: 1em 0;
+  font-weight: 600;
+  font-size: 1.4em;
+  color:#000;
+}
+.payment-right h4 span {
+	color: #000;
+}
+.payment-right p {
+	  margin: 0.8em 0;
+  color: #B6B6B6;
+  font-size: 0.85em;
+}
+.payment-right span {
+	  width: 35%;
+  display: block;
+  float: left;
+  font-size: 1.1em;
+  font-weight: 600;
+  color:#000;
+}
+.payment-right h5 {
+	  margin: 0.5em 0;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 1em 0 1.2em 0;
+  background-color: #F4F2F2;
+}
+.ticket-note{
+	padding: 1em;
+	border: 1px solid #eee;
+	background-color:#FDFDFD;
+	margin-top:2em;
+}
+.ticket-note ol {
+	padding-left: 19px;
+}
+.ticket-note p {
+	margin:0.5em 0;
+	line-height:1.8em;
+	font-size:0.95em;
+	font-size:0.95em;
+	color:#8B8B8B;
+}
+label {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.movie-ticket-book h4 {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.4em;
+}
+.movie-ticket-book p {
+	color: #848484;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.6em;
+}
+.movie-booking {
+	padding: 2em;
+	margin-left: 1.5%;
+	border: 1px solid #eee;
+  background: #FCFCFC;
+}
+.movies-dates {
+	width: 65%;
+  padding-left: 5px;
+}
+.movie-date-selection ul li {
+	display: inline-block;
+	width:20%;
+	text-align:center;
+}
+.movie-date-selection ul li.location {
+	width: 100%;
+	text-align:left;
+	margin-bottom:0.8em;
+	font-size:1.2em;
+	font-weight:600;
+}
+.movie-date-selection ul {
+	padding: 2em;
+	background-color: #FCFCFC;
+	/*margin-left: 1.5%;*/
+	border: 1px solid #eee;
+}
+.movie-date-selection ul li a{
+	color: #007DD3;
+}
+i.fa.fa-map-marker {
+	font-size: 18px;
+	margin-right: 0.5em;
+	color: #007DD3;
+}
+.movie-date-selection ul li.location a{
+	font-size: 1.2em;
+	font-weight: 600;
+	color: #000;
+	text-decoration:none;
+}
+.movie-date-selection {
+	margin-bottom:1px;
+}
+.movie-date-selection ul:hover {
+	background-color: #fff;
+}
+.pic-a-movie{
+	padding:1em;
+}
+.pic-a-movie h3 {
+	font-size: 1.7em;
+	font-weight: 600;
+	color: #000;
+}
+.select-day-booking-ticket {
+	margin: 2em 0;
+}
+.movie-show,.show-time,.cinema {
+	padding: 0;
+	float:left;
+	width:33.333%;
+	  margin-top: 1em;
+}
+h4.show {
+	font-size: 1.2em;
+	font-weight: 600;
+	padding: 10px;
+	background-color: #F0F0F0;
+}
+.movie-show figure img {
+	width: 67%;
+	margin: 20px 0 0 0;
+}
+.cinema h5 {
+	font-size: 1.2em;
+	font-weight: 600;
+	margin-top: 1.5em;
+}
+.cinema h6 {
+	font-size: 1em;
+	font-weight: 500;
+	margin-top: 0.2em;
+}
+a.sold-out {
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 12px;
+	display: block;
+	background-color: red;
+	margin: 18px 6px 0px 6px;
+	border-radius: 3px;
+	cursor:text;
+}
+a.buy-now-ticket{
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 12px;
+	display: block;
+	background-color: green;
+	margin: 18px 6px 0px 6px;
+	border-radius: 3px;
+}
+a.buy-now-ticket:hover {
+	color:#fff;
+}
+.show-time p {
+    float: left;
+	text-align:center;
+	  margin: 0.5em 0;
+}
+a.sold-out:hover {
+	color:#fff;
+}
+p.third {
+	margin-top: 1em;
+}
+p.fourth {
+	margin-top: 1.8em;
+}
+.show-title {
+	margin: 2.5em 0;
+}
