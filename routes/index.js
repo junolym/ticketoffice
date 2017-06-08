@@ -76,9 +76,9 @@ router.get('/detail/:id', function(req, res, next) {
     });
 });
 
-router.get('/payment/:id/:cinema/:time', function(req,res,next) {
-    res.render('payment', {
-        title:'Payment',
+router.get('/order/:id/:cinema/:time', function(req,res,next) {
+    res.render('order', {
+        title:'Order',
         movie_name: movie_names[req.params.id],
         cinema: req.params.cinema,
         movie_start: req.params.time
