@@ -76,19 +76,22 @@ router.get('/detail/:id', function(req, res, next) {
     });
 });
 
-router.get('/order/:id/:cinema/:time', function(req,res,next) {
-    res.render('order', {
-        title:'Order',
-        movie_name: movie_names[req.params.id],
-        cinema: req.params.cinema,
-        movie_start: req.params.time
-    });
+router.get('/order/:movie_id/:cinema/:movie_start', function(req,res,next) {
+    let data = {
+        title: 'Order',
+        movie_name: movie_names[req.params.movie_id]
+    }
+    Object.assign(data, req.params);
+    res.render('order', data);
 });
 
-router.get('/payment', function(req, res, next) {
-  res.render('payment', {
-    title:'Payment'
-  });
+router.get('/payment/:movie_id/:cinema/:movie_start/:price', function(req, res, next) {
+    var data = {
+        title: 'Payment',
+        movie_name: movie_names[req.params.movie_id]
+    };
+    Object.assign(data, req.params);
+    res.render('payment', data);
 });
 
 

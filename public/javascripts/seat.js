@@ -2,7 +2,8 @@ var price = 80; //票价
 $(document).ready(function() {
  var $cart = $('#selected-seats'), //座位区
  $counter = $('#counter'), //票数
- $total = $('#total'); //总计金额
+ $total = $('#total'), //总计金额
+ $pay = $('#pay');
  var sc = $('#seat-map').seatCharts({
  map: [ //座位图
   'aaaaaaaaaa',
@@ -31,12 +32,14 @@ $(document).ready(function() {
    .appendTo($cart);
   $counter.text(sc.find('selected').length+1);
   $total.text(recalculateTotal(sc)+price);
+  $pay[0].href = $pay[0].getAttribute('des') + $total.text();
   return 'selected';
   } else if (this.status() == 'selected') { //已选中
   //更新数量
   $counter.text(sc.find('selected').length-1);
   //更新总计
   $total.text(recalculateTotal(sc)-price);
+  $pay[0].href = $pay[0].getAttribute('des') + $total.text();
   //删除已预订座位
   $('#cart-item-'+this.settings.id).remove();
   //可选座
