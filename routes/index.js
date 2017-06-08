@@ -85,6 +85,11 @@ router.get('/order/:id/:cinema/:time', function(req,res,next) {
     });
 });
 
+router.get('/payment', function(req, res, next) {
+  res.render('payment', {
+    title:'Payment'
+  });
+});
 
 
 module.exports = router;
