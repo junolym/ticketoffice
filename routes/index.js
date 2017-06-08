@@ -94,5 +94,9 @@ router.get('/payment/:movie_id/:cinema/:movie_start/:price', function(req, res, 
     res.render('payment', data);
 });
 
+router.get('/payinfo', function(req, res, next) {
+  res.render('payinfo', {title:'PayInfo'})
+})
+
 
 module.exports = router;
