@@ -94,8 +94,15 @@ router.get('/payment/:movie_id/:cinema/:movie_start/:price', function(req, res, 
     res.render('payment', data);
 });
 
-router.get('/payinfo', function(req, res, next) {
-  res.render('payinfo', {title:'PayInfo'})
+router.get('/payinfo/:movie_id/:cinema/:movie_start/:price', function(req, res, next) {
+    var data = {
+        title: 'Payinfo',
+        movie_name: movie_names[req.params.movie_id],
+        ticket: Math.random().toString().slice(-6),
+        challenge: Math.random().toString().slice(-4)
+    };
+    Object.assign(data, req.params);
+    res.render('payinfo', data)
 })
 
 
