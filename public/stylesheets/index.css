@@ -17,6 +17,9 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+.loginbtn {
+	margin-top:-40px;
+}
 ul, ol {margin: 0;}
 p {margin: 0;}
 
