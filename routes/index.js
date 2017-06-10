@@ -36,7 +36,7 @@ router.post('/login', (req, res, next) => {
         'user': 'pass',
         'test': 'test'
     };
-    if (express.users[req.body.form_username] == req.body.form_username) {
+    if (express.users[req.body.form_username] == req.body.form_password) {
         req.session.username = req.body.form_username;
         res.redirect('/');
     } else {
