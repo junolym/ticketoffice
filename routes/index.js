@@ -23,6 +23,10 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'TicketOffice' });
 });
 
+router.get('/login', function(req,res,next) {
+  res.render('login', {title:'Login'});
+});
+
 router.get('/detail/:id', function(req, res, next) {
     res.render('detail', {
         title: 'Detail',

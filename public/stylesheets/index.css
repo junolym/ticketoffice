@@ -19,6 +19,7 @@ body a{
 }
 .loginbtn {
 	margin-top:-40px;
+  cursor: default;
 }
 ul, ol {margin: 0;}
 p {margin: 0;}
