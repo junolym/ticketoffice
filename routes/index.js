@@ -27,6 +27,10 @@ router.get('/login', (req,res,next) => {
   res.render('login', {title:'Login'});
 });
 
+router.get('/regist', (req,res,next) => {
+  res.render('regist', {title:'Regist'});
+});
+
 router.post('/login', (req, res, next) => {
     express.users = express.users || {
         'user': 'pass',
