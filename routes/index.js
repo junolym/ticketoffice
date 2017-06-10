@@ -19,15 +19,33 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'TicketOffice' });
+router.get('/', (req, res, next) => {
+    res.render('index', { title: 'TicketOffice', username: req.session.username });
 });
 
-router.get('/login', function(req,res,next) {
+router.get('/login', (req,res,next) => {
   res.render('login', {title:'Login'});
 });
 
-router.get('/detail/:id', function(req, res, next) {
+router.post('/login', (req, res, next) => {
+    express.users = express.users || {
+        'user': 'pass',
+        'test': 'test'
+    };
+    if (express.users[req.body.form_username] == req.body.form_username) {
+        req.session.username = req.body.form_username;
+        res.redirect('/');
+    } else {
+        res.render('login', { error : '用户不存在或密码错误' });
+    }
+});
+
+router.get('/logout', (req, res, next) => {
+    req.session.destroy();
+    res.redirect('/');
+});
+
+router.get('/detail/:id', (req, res, next) => {
     res.render('detail', {
         title: 'Detail',
         movie_id: req.params.id,
@@ -80,7 +98,7 @@ router.get('/detail/:id', function(req, res, next) {
     });
 });
 
-router.get('/order/:movie_id/:cinema/:movie_start', function(req,res,next) {
+router.get('/order/:movie_id/:cinema/:movie_start', (req,res,next) => {
     let data = {
         title: 'Order',
         movie_name: movie_names[req.params.movie_id]
@@ -89,7 +107,7 @@ router.get('/order/:movie_id/:cinema/:movie_start', function(req,res,next) {
     res.render('order', data);
 });
 
-router.get('/payment/:movie_id/:cinema/:movie_start/:price', function(req, res, next) {
+router.get('/payment/:movie_id/:cinema/:movie_start/:price', (req, res, next) => {
     var data = {
         title: 'Payment',
         movie_name: movie_names[req.params.movie_id]
@@ -98,7 +116,7 @@ router.get('/payment/:movie_id/:cinema/:movie_start/:price', function(req, res, 
     res.render('payment', data);
 });
 
-router.get('/payinfo/:movie_id/:cinema/:movie_start/:price', function(req, res, next) {
+router.get('/payinfo/:movie_id/:cinema/:movie_start/:price', (req, res, next) => {
     var data = {
         title: 'Payinfo',
         movie_name: movie_names[req.params.movie_id],
