@@ -80,7 +80,7 @@ create table screens
 (
    scr_cinema_id        int not null,
    screen_name          varchar(31) not null,
-   screan_seat          int,
+   screen_seat          int,
    primary key (scr_cinema_id, screen_name)
 );
 
@@ -99,17 +99,17 @@ create table users
 );
 
 alter table orders add constraint FK_Reference_4 foreign key (ord_sch_id)
-      references schedules (schedule_id) on delete restrict on update restrict;
+      references schedules (schedule_id) on delete cascade on update cascade;
 
 alter table orders add constraint FK_Reference_5 foreign key (ord_username)
-      references users (username) on delete restrict on update restrict;
+      references users (username) on delete cascade on update cascade;
 
 alter table schedules add constraint FK_Reference_1 foreign key (sch_movie_id)
-      references movies (movie_id) on delete restrict on update restrict;
+      references movies (movie_id) on delete cascade on update cascade;
 
 alter table schedules add constraint FK_Reference_3 foreign key (sch_cinema_id, sch_screen_name)
-      references screens (scr_cinema_id, screen_name) on delete restrict on update restrict;
+      references screens (scr_cinema_id, screen_name) on delete cascade on update cascade;
 
 alter table screens add constraint FK_Reference_2 foreign key (scr_cinema_id)
-      references cinemas (cinema_id) on delete restrict on update restrict;
+      references cinemas (cinema_id) on delete cascade on update cascade;
 
